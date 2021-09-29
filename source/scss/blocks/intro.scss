@@ -1,3 +1,20 @@
+.loaded {
+  .page-header__logo {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .page-header__nav {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .screen__footer {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .intro {
   display: flex;
   flex-direction: column;
