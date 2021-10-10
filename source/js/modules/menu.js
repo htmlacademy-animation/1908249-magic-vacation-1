@@ -25,7 +25,7 @@ export default () => {
         setTimeout(() => {
           window.location.hash = '#prizes'
           overlay.classList.remove('active');
-        }, 350);
+        }, 500);
       }
       if (window.innerWidth < 1025) {
         header.classList.remove(`page-header--menu-opened`);

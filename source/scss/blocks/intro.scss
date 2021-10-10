@@ -7,6 +7,10 @@
   .page-header__nav {
     opacity: 1;
     transform: translateX(0);
+
+    @media (max-width: $tablet) {
+      transform: translate(-100%);
+    }
   }
 
   .screen__footer {
