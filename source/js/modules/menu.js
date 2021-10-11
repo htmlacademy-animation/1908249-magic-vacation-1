@@ -23,6 +23,7 @@ export default () => {
         evt.preventDefault();
         overlay.classList.add('active');
         setTimeout(() => {
+          window.location.hash = '#prizes'
           window.location.hash = '#prizes';
           overlay.classList.remove('active');
         }, 500);

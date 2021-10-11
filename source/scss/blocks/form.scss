@@ -50,7 +50,8 @@
     position: absolute;
     border-radius: 3rem;
     outline: none;
-    animation: appearanceRight 0.5s ease;
+    animation-name: appearanceRight;
+    animation-duration: 0.5s;
 
     &:focus {
       border: 1px solid $c-purple;
@@ -80,6 +81,17 @@
     }
   }
 
+  @media (max-width: $tablet) {
+    position: absolute;
+
+    .form__field {
+      animation-name: appearanceRight, fade;
+      animation-duration: 0.35s, 0.25s;
+      animation-delay: 0.35s, 0.35s;
+      animation-fill-mode: both;
+    }
+  }
+
   @media (max-width: $tablet) and (orientation: landscape) {
     width: calc(100% - 9rem);
   }
@@ -100,6 +112,13 @@
 .form__button {
   flex-grow: 1;
 
+  span {
+    animation-name: fade;
+    animation-duration: 0.35s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+  }
+
   @media (orientation: portrait) {
     position: relative;
     flex: none;
@@ -107,6 +126,15 @@
     width: 4rem;
     height: 4rem;
     font-size: 0;
+  }
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    //width: 4rem;
+    margin-left: auto;
+    animation-name: appearance-form-button;
+    animation-duration: 0.35s;
+    animation-fill-mode: forwards;
   }
 
   @media (max-width: $tablet) and (orientation: landscape) {
@@ -128,6 +156,13 @@
     display: none;
     width: 1.6rem;
     height: 1.8rem;
+
+    @media (max-width: $tablet) {
+      animation-name: fade;
+      animation-duration: 0.35s;
+      animation-delay: 0.5s;
+      animation-fill-mode: both;
+    }
 
     @media (min-width: $stop-scaling) {
       width: 16px;
@@ -163,5 +198,12 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       width: calc(100% - 5rem);
     }
+  }
+}
+
+
+@keyframes appearance-form-button {
+  to {
+    width: 4rem;
   }
 }
